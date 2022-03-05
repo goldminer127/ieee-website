@@ -1,0 +1,501 @@
+#header
+{
+    width: 100%;
+    height: 750px;
+}
+
+#projectHeader
+{
+    width: 100%;
+    height: 650px;
+}
+
+#eventHeader
+{
+    width: 100%;
+    height: 650px;
+}
+
+.hidden
+{
+   position: absolute;
+   opacity: 0; 
+}
+
+/*Banner Components*/
+#banner
+{
+    z-index: 3;
+    width: 100%;
+    height: 750px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#banner.normal
+{
+    width: 130%;
+}
+
+#banner.mobile
+{
+    left: 0%;
+}
+
+#projectbanner
+{
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#projectbanner.normal
+{
+    height: 450px;
+    top: 190px;
+}
+
+#projectbanner.reduced
+{
+    height: 450px;
+    top: 190px;
+}
+
+#projectbanner.mobile
+{
+    height: 300px;
+    top: 260px;
+}
+
+#eventbanner
+{
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#eventbanner.normal
+{
+    width: 130%;
+    height: calc(650px - 180px);
+    top: 180px
+}
+
+#eventbanner.reduced
+{
+    width: 130%;
+    height: calc(650px - 180px);
+    top: 180px;
+}
+
+#eventbanner.mobile
+{
+    height: 470px;
+    top: 180px;
+}
+
+#logo
+{
+    z-index: 3;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+}
+
+#logo.normal
+{
+    left: 14px;
+    transform: translateY(-50%);
+}
+
+#logo.reduced
+{
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+#logo.mobile
+{
+    height: 50%;
+    transform: translate(-50%,-50%);
+    left: 60%;
+}
+
+/* Navigation Main */
+#navigation
+{
+    z-index: 3;
+    background-color: rgba(42, 0, 51, 0.8);
+    width: 100%;
+    height: 125px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    border-top: 3px solid orange;
+    border-bottom: 5px double orange;
+}
+
+#navcontainer
+{
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    width: 32%;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+}
+
+#navcontainer.normal
+{
+    visibility: visible;
+}
+
+#navcontainer.reduced
+{
+    visibility: hidden;
+}
+
+#navcontainer.mobile
+{
+    visibility: hidden;
+}
+
+.enavbutton
+{
+    z-index: 3;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    right: 2%;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#projectsbutton
+{
+    z-index: 3;
+    text-align: left;
+    background-color: rgba(49, 49, 49, 0);
+    border: none;
+    cursor: pointer;
+
+    /* Text */
+    color: white;
+}
+
+#projectsbutton.normal
+{
+    visibility: visible;
+}
+
+#projectsbutton.reduced
+{
+    visibility: hidden;
+}
+
+#projectsbutton.mobile
+{
+    visibility: hidden;
+}
+
+#schedulebutton
+{
+    z-index: 3;
+    text-align: left;
+    background-color: rgba(49, 49, 49, 0);
+    border: none;
+    cursor: pointer;
+
+    /* Text */
+    color: white;
+}
+
+#schedulebutton.normal
+{
+    visibility: visible;
+}
+
+#schedulebutton.reduced
+{
+    visibility: hidden;
+}
+
+#schedulebutton.mobile
+{
+    visibility: hidden;
+}
+
+#homebutton
+{
+    z-index: 3;
+    text-align: left;
+    background-color: rgba(49, 49, 49, 0);
+    border: none;
+    cursor: pointer;
+
+    /* Text */
+    color: white;
+}
+
+#homebutton.normal
+{
+    visibility: visible;
+}
+
+#homebutton.reduced
+{
+    visibility: hidden;
+}
+
+#homebutton.mobile
+{
+    visibility: hidden;
+}
+
+/* Extended Menu */
+
+.extendedmenuhidden
+{
+    opacity: 0;
+}
+
+.extendedmenushow
+{
+    width: 475px;
+    height: 300px;
+    background-color: rgba(43, 43, 43, 1);
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 1%;
+    animation: extendedmenushow 1s;
+}
+
+.columns
+{
+    animation: columnshow 1s;
+}
+
+#column1
+{
+    width: 150px;
+    height: 300px;
+}
+
+#column2
+{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 150px;
+    top: 0px;
+}
+
+.leftline
+{
+    width: 3px;
+    height: 303px;
+    background-color: orange;
+    position: absolute;
+    left: -3px;
+    animation: leftlineshow .25s;
+}
+
+.bottomline
+{
+    width: 500px;
+    height: 3px;
+    background-color: orange;
+    position: absolute;
+    bottom: -3px;
+    animation: bottomlineshow .50s;
+}
+
+.rightline
+{
+    width: 3px;
+    height: 303px;
+    background-color: orange;
+    position: absolute;
+    right: -3px;
+    animation: rightlineshow .75s;
+}
+
+/* Navigation Reduced */
+
+#menu
+{
+    z-index: 4;
+    background-color: rgba(43, 43, 43, 1);
+    width: 350px;
+    height: 460px;
+    position: absolute;
+    top: 0%;
+}
+
+/* Triple bars */
+#menubutton
+{
+    z-index: 3;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+}
+
+#menubutton.normal
+{
+    visibility: hidden;
+}
+
+#menubutton.reduced
+{
+    left: 0px;
+    visibility: visible;
+}
+
+#menubutton.mobile
+{
+    left: 0px;
+    visibility: visible;
+}
+
+#reducedmenuimg
+{
+    z-index: 3;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#reducedmenuimg.normal
+{
+    visibility: hidden;
+}
+
+#reducedmenuimg.reduced
+{
+    animation: slowshow 1s;
+}
+
+#reducedmenuimg.mobile
+{
+    animation: slowshow 1s;
+}
+
+.menunavbutton
+{
+    /* Container */
+    width: 100%;
+    z-index: 4;
+    border-top: none;
+    border-bottom: 2px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    cursor: pointer;
+    padding: 1px 6%;
+
+    /* Text */
+    color: white;
+    top: 0%;
+    left: 0%;
+}
+
+.menunavbutton:hover
+{
+    background-color: rgb(172, 112, 0);
+    border: none;
+}
+
+
+.menuinitialhide
+{
+    left: -400px;
+}
+
+.menushow
+{
+    left: 0px;
+    animation: slowmenushow 1s;
+}
+
+.menuhide
+{
+    left: -400px;
+    animation: slowmenuhide 0.1s;
+}
+
+/* Animations */
+
+/* Reduced Menu Button */
+@keyframes slowshow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slowhide {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* Reduced Menu */
+@keyframes slowmenushow {
+    0% {left: -400px;}
+    100% {left: 0px;}
+}
+
+@keyframes slowmenuhide {
+    0% {left: 0px;}
+    100% {left: -400px;}
+}
+
+/* Extended Menu */
+@keyframes extendedmenushow {
+    0% {background-color: rgba(43, 43, 43, 0);}
+    75% {background-color: rgba(43, 43, 43, 0);}
+    100% {background-color: rgba(43, 43, 43, 1);}
+}
+
+@keyframes leftlineshow {
+    0% {height: 0px;}
+    100% {height: 303px;}
+}
+
+@keyframes bottomlineshow {
+    0% {width: 0px;}
+    50% {width: 0px;}
+    100% {width: 500px;}
+}
+
+@keyframes rightlineshow {
+    0% {height: 0px; top: 303px;}
+
+    66% {height: 0px; top: 303px;}
+
+    100% {height: 303px; top: 0px;}
+}
+
+@keyframes columnshow
+{
+    0% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}

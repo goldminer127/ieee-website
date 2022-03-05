@@ -1,0 +1,121 @@
+#weekly-event-page-body
+{
+    background: no-repeat relative;
+    background-position: 60% 0px;
+    background-size: 2262px 1424px;
+    background-image: url(../Components/images/WeeklyEventBackground.jpg) ;
+}
+
+#weekly-event-page-body.mobile
+{
+    background-position: 78%;
+    background-size: auto 120%;
+}
+
+#weekly-event-title-container
+{
+    height: 150px;
+    position: static;
+}
+
+#weekly-event-title
+{
+    position: relative;
+    color: white;
+    font-size: 48px;
+    line-height: .3in;
+    text-align: center;
+    margin: 0;
+}
+
+#weekly-event-title.reduced
+{
+    width: 300px;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
+    top: 50px;
+    left: 50%;
+}
+
+#weekly-event-title.mobile
+{
+    width: 200px;
+    font-size: 25px;
+    transform: translateY(-50%);
+    top: 60px;
+    left: 160px;
+}
+
+#weekly-event-subtitle
+{
+    font-family: Consolas;
+    font-size: 20px;
+}
+
+#title-line1-bend
+{
+    width: 230px;
+    height: 10px;
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: 325px;
+    left: -35px;
+    background-color: rgb(204,102,0);
+}
+
+#title-line1-straight
+{
+    width: calc(100% - 157px);
+    height: 9px;
+    position: absolute;
+    top: 405px;
+    left: 157px;
+    background-color: rgb(204,102,0);
+}
+
+#title-line2-bend
+{
+    width: 255px;
+    height: 10px;
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: 325px;
+    left: -62px;
+    background-color: rgb(51,0,77);
+}
+
+#title-line2-straight
+{
+    width: calc(100% - 150px);
+    height: 11px;
+    position: absolute;
+    top: 414px;
+    left: 153px;
+    background-color: rgb(51,0,77);
+}
+
+#weekly-event-description
+{
+    width: 75%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    font-family: Consolas;
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+    background-color: rgb(50,50,50,0.80);
+}
+
+#weekly-event-hosts
+{
+    width: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%
+}
+
+#weekly-event-hosts.mobile
+{
+    padding-bottom: 100px;
+}

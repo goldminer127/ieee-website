@@ -1,0 +1,30 @@
+body
+{
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+/* Description Components */
+.defaultspacing
+{
+    line-height: .6in;
+}
+
+#projectsmaindescription
+{
+    width: 50%;
+    position: relative;
+    left: 40px;
+    color: rgb(88, 88, 88);
+}
+
+#projectmaindescriptiontitle
+{
+    font-size: 50px;
+}
+
+#projectmaindescriptionbody
+{
+    font-size: 25px;
+}

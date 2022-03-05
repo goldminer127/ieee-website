@@ -1,0 +1,70 @@
+#workshop-archive-card
+{
+    width: 500px;
+    text-align: center;
+    border: 5px solid black;
+    background-color: wheat;
+}
+
+#workshop-archive-card.mobile
+{
+    width: 275px;
+    text-align: center;
+    border: 5px solid black;
+}
+
+#archive-card-images
+{
+    width: 256px;
+    height: 144px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+#archive-thumbnail
+{
+    width: 256px;
+    height: 144px;
+}
+
+#archive-play-button
+{
+    width: 60px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.card-show
+{
+    visibility: visible;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 1px;
+    animation: slide-down 2s;
+}
+
+.card-hide
+{
+    visibility: hidden;
+    overflow: hidden;
+    height: 0px;
+    padding-top: 1px;
+    animation: slide-up 0s;
+}
+
+@keyframes slide-down
+{
+    0% {height: auto; opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slide-up
+{
+    0% {height: auto; visibility: visible;}
+    100% {height: 0px;}
+}

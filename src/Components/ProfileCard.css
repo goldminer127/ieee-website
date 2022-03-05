@@ -1,0 +1,218 @@
+#profilecard
+{
+    position: relative;
+    transform: translateX(-50%);
+}
+
+#profilecard.normal
+{
+    width: 650px;
+    height: 250px;
+    left: 50%;
+}
+
+#profilecard.reduced
+{
+    width: 450px;
+    height: 250px;
+    left: 50%;
+}
+
+#profilecard.mobile
+{
+    width: 400px;
+    height: 250px;
+    top: 20px;
+    left: 50%;
+}
+
+#name
+{
+    position: absolute;
+    font-size: 50px;
+}
+
+#name.normal
+{
+    top: 0px;
+    left: 270px;
+}
+
+#name.reduced
+{
+    top: 30px;
+    left: 200px;
+    font-size: 44px;
+}
+
+#name.mobile
+{
+    top: 20px;
+    left: 200px;
+    font-size: 40px;
+}
+
+#membership
+{
+    position: absolute;
+    font-size: 25px;
+}
+
+#membership.normal
+{
+    top: 80px;
+    left: 275px;
+}
+
+#membership.reduced
+{
+    top: 140px;
+    left: 200px;
+    font-size: 22px;
+}
+
+#membership.mobile
+{
+    top: 130px;
+    left: 200px;
+    font-size: 20px;
+}
+
+#profileimage
+{
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 60px;
+    border-radius: 100px;
+}
+
+#profileimage.normal
+{
+    width: 200px;
+    height: 200px;
+}
+
+#profileimage.reduced
+{
+    width: 150px;
+    height: 150px;
+    left: 30px;
+}
+
+#profileimage.mobile
+{
+    width: 160px;
+    height: 160px;
+    left: 30px;
+}
+
+#githubbutton
+{
+    position: absolute;
+    left: 270px;
+    top: 150px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#githubbutton:hover
+{
+    box-shadow: 5px 10px #888888;
+    animation: shadowEffect 0.5s;
+}
+
+#githubbutton.normal
+{
+    width: 125px;
+    height: 50px;
+}
+
+#githubbutton.reduced
+{
+    width: 125px;
+    height: 50px;
+    left: 200px;
+    top: 200px;
+}
+
+#githubbutton.mobile
+{
+    width: 125px;
+    height: 50px;
+    left: 40px;
+    top: 230px;
+}
+
+#githubimg
+{
+    height: 75%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 8%;
+    top: 50%;
+}
+
+#githubname
+{
+    left: 52%;
+    top: 20%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+#linkedinbutton
+{
+    position: absolute;
+    left: 420px;
+    top: 150px;
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+}
+
+#linkedinbutton:hover
+{
+    box-shadow: 5px 10px #888888;
+    animation: shadowEffect 0.5s;
+}
+
+#linkedinbutton.normal
+{
+    width: 125px;
+    height: 50px;
+}
+
+#linkedinbutton.reduced
+{
+    width: 125px;
+    height: 50px;
+    left: 350px;
+    top: 200px;
+}
+
+#linkedinbutton.mobile
+{
+    width: 125px;
+    height: 50px;
+    left: 190px;
+    top: 230px;
+}
+
+#linkedinimg
+{
+    height: 75%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 8%;
+    top: 50%;
+}
+
+#linkedinname
+{
+    left: 52%;
+    top: 20%;
+    position: absolute;
+    transform: translateY(-50%);
+}

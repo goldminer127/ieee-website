@@ -1,0 +1,167 @@
+#pagemaindescription
+{
+    position: relative;
+    top: 40px;
+    line-height: .6in;
+}
+
+#pagemaindescription.normal
+{
+    width: 100%;
+}
+
+#pagemaindescription.reduced
+{
+    width: 100%;
+}
+
+#pagemaindescription.mobile
+{
+    width: 100%;
+}
+
+#pagemaindescriptiontitle
+{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: .6in;
+}
+
+#pagemaindescriptiontitle.normal
+{
+    width: 50%;
+}
+
+#pagemaindescriptiontitle.reduced
+{
+    width: 75%;
+}
+
+#pagemaindescriptiontitle.mobile
+{
+    width: 75%;
+}
+
+#pagemaindescriptionbody
+{
+    font-size: 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: .6in;
+}
+
+#pagemaindescriptionbody.normal
+{
+    width: 50%;
+}
+
+#pagemaindescriptionbody.reduced
+{
+    width: 75%;
+}
+
+#pagemaindescriptionbody.mobile
+{
+    width: 75%;
+}
+
+#featureimages
+{
+    width: 800px;
+    height: 400px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#featureimages.reduced
+{
+    width: 525px;
+    height: 275px;
+}
+
+#featureimages.mobile
+{
+    width: 525px;
+    height: 275px;
+}
+
+#arrowbackward
+{
+    z-index: 3;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 40px;
+    cursor: pointer;
+}
+
+#arrowbackward.mobile
+{
+    left: 100px;
+}
+
+#arrowforward
+{
+    z-index: 3;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: calc(100% - 40px);
+    cursor: pointer;
+}
+
+#arrowforward.mobile
+{
+    left: calc(100% - 100px);
+}
+
+.emptyimg
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+.filledimg
+{
+    height: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.displayimg
+{
+    height: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 1;
+    overflow: hidden;
+}
+
+@keyframes fadein
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeout
+{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes shadowEffect
+{
+    0% {box-shadow: 0px 0px #888888;}
+    100% {box-shadow: 5px 10px #888888;}
+}

@@ -1,0 +1,146 @@
+body
+{
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Wigets */
+#discordwiget
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+#discordwiget.normal
+{
+    width: 40%;
+    height: 85%;
+}
+
+#discordwiget.reduced
+{
+    width: 75%;
+    height: 500px;
+    align-content: center;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#discordwiget.mobile
+{
+    width: 75%;
+    height: 500px;
+    align-content: center;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+/* Description Components */
+.defaultspacing
+{
+    line-height: .6in;
+}
+
+#eventsmaindescription
+{
+    width: 100%;
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 41, 41);
+    padding-top:20px;
+    padding-bottom:100px;
+}
+
+#eventsmaindescriptiontitle
+{
+    position: relative;
+    font-size: 50px;
+}
+
+#eventsmaindescriptiontitle.normal
+{
+    width: 50%;
+    left: 40px;
+}
+
+#eventsmaindescriptiontitle.reduced
+{
+    width: 75%;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+}
+
+#eventsmaindescriptiontitle.mobile
+{
+    width: 75%;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+}
+
+#eventsmaindescriptionbody
+{
+    width: 50%;
+    position: relative;
+    left: 40px;
+    font-size: 25px;
+}
+
+#eventsmaindescriptionbody.normal
+{
+    width: 50%;
+    left: 40px;
+}
+
+#eventsmaindescriptionbody.reduced
+{
+    width: 75%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#eventsmaindescriptionbody.mobile
+{
+    width: 75%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#featuredvideo
+{
+    width: 75%;
+    cursor: pointer;
+}
+
+#workshopdescription
+{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+    color: black;
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+#workshopdescriptiontitle
+{
+    width: 75%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 50px;
+}
+
+#workshopdescriptionbody
+{
+    width: 75%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 25px;
+}
