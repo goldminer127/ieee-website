@@ -22,7 +22,15 @@ class WorkshopCard extends React.Component
         if(props.flyer !== undefined && props.flyer !== "")
             return{flyer: props.flyer};
         else
-            return {id: props.id, name: props.name, description: props.description,date: props.date,time: props.time,location: props.location,link: props.link};
+            return {
+                id: props.id, 
+                name: props.name, 
+                description: props.description,
+                date: props.date,
+                time: props.time,
+                location: props.location,
+                link: props.link
+            };
     }
 
     goToLink()
@@ -38,14 +46,14 @@ class WorkshopCard extends React.Component
                 <div id = "workshop-card">
                     <div id = "inner-workshop-card">
                         <div id = "front-workshop-card">
-                            <img id = "workshop-background" src = {Background}/>
+                            <img id = "workshop-background" alt = "workshop background" src = {Background}/>
                             <h2 id = "workshop-name">{this.state.name}</h2>
                             <h3 id = "workshop-day">{this.state.date}</h3>
                             <h4 id = "workshop-time">{this.state.time}</h4>
                             <h4 id = "workshop-location">Location: {this.state.location}</h4>
                         </div>
                         <div id = "back-workshop-card">
-                            <img id = "workshop-background" src = {Background}/>
+                            <img id = "workshop-background" alt = "workshop background" src = {Background}/>
                             <p id = "workshop-description">{this.state.description}</p>
                             <h4 id = "workshop-link" onClick = {this.goToLink.bind(this)}>Click to join!</h4>
                         </div>
@@ -57,7 +65,7 @@ class WorkshopCard extends React.Component
         {
             return(
                 <div id = "workshop-card">
-                    <img id = "workshop-background" src = {this.state.flyer}/>
+                    <img id = "workshop-background" alt = "workshop flyer" src = {this.state.flyer}/>
                 </div>
             );
         }

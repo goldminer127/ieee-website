@@ -53,10 +53,10 @@ class WeeklyEventPage extends React.Component
     render()
     {
         return(
-            <div id = "weekly-event-page-body" className = "normal">
+            <div id = "weekly-event-page-body" >
                 <Header type = {this.state.type}/>
                 <div id = "weekly-event-title-container">
-                    <h1 id = "weekly-event-title" className = "normal">{this.state.title}<br/><span id = "weekly-event-subtitle">{this.state.subtitle}</span></h1>
+                    <h1 id = "weekly-event-title" >{this.state.title}<br/><span id = "weekly-event-subtitle">{this.state.subtitle}</span></h1>
                     <div id = "title-line1-bend"/>
                     <div id = "title-line2-bend"/>
                     <div id = "title-line1-straight"/>
@@ -64,9 +64,12 @@ class WeeklyEventPage extends React.Component
                 </div>
                 <br/>
                     <br/>
+                        <br/>
+                        <br/>
+                    <br/>
                 <br/>
-                <div id = "weekly-event-hosts" className = "normal">
-                    <h1 style = {{fontSize: "50px", textAlign: "center", color: "white", border: "5px solid rgb(204,102,0)", margin: "0"}}>Event Hosts</h1>
+                <div id = "weekly-event-hosts" >
+                    <h1 style = {{transform: "translateX(-50%)", left: "50%", fontSize: "50px", textAlign: "center", color: "white", border: ".5rem solid rgb(204,102,0)", position: "relative", height: "4.5rem", width: "20rem"}}>Event Hosts</h1>
                     <ProfileCard
                         avatar = {this.state.hostImage}
                         name = {this.state.hostName}
@@ -74,11 +77,14 @@ class WeeklyEventPage extends React.Component
                         linkedin = {this.state.hostLinkedin}
                     />
                 </div>
-                <p id = "weekly-event-description" className = "normal">{this.state.description}</p>
                 <br/>
                     <br/>
                 <br/>
-                <Footer/>
+                <p id = "weekly-event-description" >{this.state.description}</p>
+                <br/>
+                    <br/>
+                <br/>
+                <Footer showImage = {false}/>
             </div>
         );
     }

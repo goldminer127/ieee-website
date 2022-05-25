@@ -1,0 +1,66 @@
+.section-body
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#archive-section
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.section-name
+{
+    color:white;
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+#archive-body
+{
+
+}
+
+#archive-dates
+{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+}
+
+.archive-semesters
+{
+    display: flex;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.archive-semester
+{
+    animation: reveal 2s;
+    width: 100%;
+    height: auto;
+    font-size: 2.5vw;
+    line-height: 0;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    margin: 0;
+}
+
+.hidden
+{
+    display: none;
+}

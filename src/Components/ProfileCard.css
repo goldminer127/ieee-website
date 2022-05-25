@@ -1,151 +1,206 @@
-#profilecard
+@media screen and (min-width: 901px)
 {
-    position: relative;
-    transform: translateX(-50%);
+    .profilecard
+    {
+        position: relative;
+        transform: translateX(-50%);
+        width: 40rem;
+        height: 20rem;
+        left: 50%;
+    }
+
+    #name
+    {
+        position: absolute;
+        font-size: 50px;
+        top: 2rem;
+        left: 14.5rem;
+    }
+
+    #membership
+    {
+        position: absolute;
+        font-size: 25px;
+        top: 12rem;
+        left: 14.5rem;
+    }
+
+    #profileimage
+    {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 1rem;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .githubbutton
+    {
+        position: absolute;
+        left: 50%;
+        top: 17rem;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        width: 125px;
+        height: 50px;
+    }
+
+    .linkedinbutton
+    {
+        position: absolute;
+        left: 25%;
+        top: 17rem;
+        cursor: pointer;
+        background-color: royalblue;
+        color: white;
+        width: 125px;
+        height: 50px;
+    }
 }
 
-#profilecard.normal
+/* Reduced screen for tablets and reduced windows */
+@media screen and (max-width: 900px) and (min-width: 601px)
 {
-    width: 650px;
-    height: 250px;
-    left: 50%;
+    .profilecard
+    {
+        position: relative;
+        transform: translateX(-50%);
+        width: 30rem;
+        height: 18rem;
+        left: 50%;
+    }
+
+    #name
+    {
+        position: absolute;
+        font-size: 50px;
+        top: 30px;
+        left: 11.5rem;
+        font-size: 44px;
+    }
+
+    #membership
+    {
+        position: absolute;
+        font-size: 25px;
+        top: 11rem;
+        left: 10rem;
+        font-size: 22px;
+    }
+    #profileimage
+    {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+        border-radius: 100px;
+        width: 150px;
+        height: 150px;
+        left: 30px;
+    }
+
+    .githubbutton
+    {
+        position: absolute;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        width: 125px;
+        height: 50px;
+        left: 2rem;
+        top: 15rem;
+    }
+
+    .linkedinbutton
+    {
+        position: absolute;
+        cursor: pointer;
+        background-color: royalblue;
+        color: white;
+        width: 125px;
+        height: 50px;
+        left: 12rem;
+        top: 15rem;
+    }
+    
 }
 
-#profilecard.reduced
+@media screen and (max-width: 600px)
 {
-    width: 450px;
-    height: 250px;
-    left: 50%;
+    .profilecard
+    {
+        position: relative;
+        transform: translateX(-50%);
+        width: 16rem;
+        height: 15rem;
+        top: 20px;
+        left: 50%;
+    }
+
+    #name
+    {
+        position: absolute;
+        font-size: 50px;
+        top: 3rem;
+        left: 7rem;
+        font-size: 2rem;
+    }
+
+    #membership
+    {
+        position: absolute;
+        font-size: 25px;
+        top: 9.5rem;
+        left: 1rem;
+        font-size: 20px;
+    }
+
+    #profileimage
+    {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+        left: .5rem;
+        border-radius: 100px;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .githubbutton
+    {
+        position: absolute;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        width: 125px;
+        height: 50px;
+        left: 40px;
+        top: 230px;
+    }
+
+    .linkedinbutton
+    {
+        position: absolute;
+        cursor: pointer;
+        background-color: royalblue;
+        color: white;
+        width: 125px;
+        height: 50px;
+        left: 190px;
+        top: 230px;
+    }
 }
 
-#profilecard.mobile
-{
-    width: 400px;
-    height: 250px;
-    top: 20px;
-    left: 50%;
-}
-
-#name
-{
-    position: absolute;
-    font-size: 50px;
-}
-
-#name.normal
-{
-    top: 0px;
-    left: 270px;
-}
-
-#name.reduced
-{
-    top: 30px;
-    left: 200px;
-    font-size: 44px;
-}
-
-#name.mobile
-{
-    top: 20px;
-    left: 200px;
-    font-size: 40px;
-}
-
-#membership
-{
-    position: absolute;
-    font-size: 25px;
-}
-
-#membership.normal
-{
-    top: 80px;
-    left: 275px;
-}
-
-#membership.reduced
-{
-    top: 140px;
-    left: 200px;
-    font-size: 22px;
-}
-
-#membership.mobile
-{
-    top: 130px;
-    left: 200px;
-    font-size: 20px;
-}
-
-#profileimage
-{
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 60px;
-    border-radius: 100px;
-}
-
-#profileimage.normal
-{
-    width: 200px;
-    height: 200px;
-}
-
-#profileimage.reduced
-{
-    width: 150px;
-    height: 150px;
-    left: 30px;
-}
-
-#profileimage.mobile
-{
-    width: 160px;
-    height: 160px;
-    left: 30px;
-}
-
-#githubbutton
-{
-    position: absolute;
-    left: 270px;
-    top: 150px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-}
-
-#githubbutton:hover
+/* Common */
+.githubbutton:hover
 {
     box-shadow: 5px 10px #888888;
     animation: shadowEffect 0.5s;
 }
 
-#githubbutton.normal
-{
-    width: 125px;
-    height: 50px;
-}
-
-#githubbutton.reduced
-{
-    width: 125px;
-    height: 50px;
-    left: 200px;
-    top: 200px;
-}
-
-#githubbutton.mobile
-{
-    width: 125px;
-    height: 50px;
-    left: 40px;
-    top: 230px;
-}
-
-#githubimg
+.githubimg
 {
     height: 75%;
     position: absolute;
@@ -154,7 +209,7 @@
     top: 50%;
 }
 
-#githubname
+.githubname
 {
     left: 52%;
     top: 20%;
@@ -162,45 +217,15 @@
     transform: translateY(-50%);
 }
 
-#linkedinbutton
-{
-    position: absolute;
-    left: 420px;
-    top: 150px;
-    cursor: pointer;
-    background-color: royalblue;
-    color: white;
-}
-
-#linkedinbutton:hover
+.linkedinbutton:hover
 {
     box-shadow: 5px 10px #888888;
     animation: shadowEffect 0.5s;
-}
-
-#linkedinbutton.normal
-{
     width: 125px;
     height: 50px;
 }
 
-#linkedinbutton.reduced
-{
-    width: 125px;
-    height: 50px;
-    left: 350px;
-    top: 200px;
-}
-
-#linkedinbutton.mobile
-{
-    width: 125px;
-    height: 50px;
-    left: 190px;
-    top: 230px;
-}
-
-#linkedinimg
+.linkedinimg
 {
     height: 75%;
     position: absolute;
@@ -209,7 +234,7 @@
     top: 50%;
 }
 
-#linkedinname
+.linkedinname
 {
     left: 52%;
     top: 20%;

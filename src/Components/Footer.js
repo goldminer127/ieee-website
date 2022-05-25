@@ -1,4 +1,4 @@
-import footerBackground from "./images/Footer.png"
+import footerBackground from "./images/Footer.JPG"
 import FooterLogo from "./images/FooterLogo.png"
 import YoutubeLogo from "./images/youtube.png"
 import LinkedinLogo from "./images/linkedin.png"
@@ -6,10 +6,33 @@ import GithubLogo from "./images/github.png"
 import DiscordLogo from "./images/discord.png"
 import InstagramLogo from "./images/instagram.png"
 import TwitterLogo from "./images/twitter.png"
+import React from "react"
 import "./Footer.css"
 
-function Footer() 
+class Footer extends React.Component
 {
+  constructor(props)
+  {
+      super(props)
+      this.state = {
+        showImage: undefined,
+      }
+  }
+
+  static getDerivedStateFromProps(props, state)
+  {
+    let showImage = props.showImage;
+    if(showImage === undefined)
+    {
+      showImage = true;
+    }
+    return{
+      showImage: showImage,
+    };
+  }
+
+  render()
+  {
     const goToYoutube = () =>
     {
       window.open("https://m.youtube.com/channel/UCJMvuEO6dZcyzTsWfh7cXTA/featured")
@@ -40,12 +63,14 @@ function Footer()
       window.open("https://mobile.twitter.com/ieeeualbany?lang=en")
     }
 
-    return(
+    if(this.state.showImage)
+    {
+      return(
         <div id = "footer">
           <img src= {footerBackground} id = "footerbackground" alt="Footer"/>
             <div id = "footercontent">
-            <div id = "footerlinks" className = "normal">
-              <img src= {FooterLogo} id = "footerlogo" className = "normal" alt="Footer logo"/>
+            <div id = "footerlinks">
+              <img src= {FooterLogo} id = "footerlogo" alt="Footer logo"/>
               <br/>
                 <img src = {YoutubeLogo} id = "youtubelink" className = "footerlinks" onClick = {goToYoutube} alt = "Youtube link"/>
                 <img src = {DiscordLogo} id = "discordlink" className = "footerlinks" onClick = {goToDiscord} alt = "Discord link"/>
@@ -56,6 +81,27 @@ function Footer()
             </div>
             </div>
         </div>
-    );
+      );
+    }
+    else
+    {
+      return(
+        <div id = "footer-trans">
+            <div id = "footercontent">
+            <div id = "footerlinks">
+              <img src= {FooterLogo} id = "footerlogo" alt="Footer logo"/>
+              <br/>
+                <img src = {YoutubeLogo} id = "youtubelink" className = "footerlinks" onClick = {goToYoutube} alt = "Youtube link"/>
+                <img src = {DiscordLogo} id = "discordlink" className = "footerlinks" onClick = {goToDiscord} alt = "Discord link"/>
+                <img src = {LinkedinLogo} id = "linkedinlink" className = "footerlinks" onClick = {goToLinkedIn} alt = "Linkedin link"/>
+                <img src = {GithubLogo} id = "githublink" className = "footerlinks" onClick = {goToGithub} alt = "Github link"/>
+                <img src = {InstagramLogo} id = "instagramlink" className = "footerlinks" onClick = {goToInstagram} alt = "Instagram link"/>
+                <img src = {TwitterLogo} id = "twitterlink" className = "footerlinks" onClick = {goToTwitter} alt = "Twitter link"/>
+            </div>
+            </div>
+        </div>
+      );
+    }
+  }
 }
 export default Footer;

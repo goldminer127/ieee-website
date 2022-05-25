@@ -21,25 +21,25 @@ class EventsBanner extends React.Component
     //Links
     goToProjects()
     {
-        if(window.location.href !== "http://localhost:3000/events/projects")
+        if(window.location.href !== document.location.origin + "/events/projects")
         {
-            window.location.href=("http://localhost:3000/events/projects");
+            window.location.href=(document.location.origin + "/events/projects");
         }
     }
 
     goToSchedule()
     {
-        if(window.location.href !== "http://localhost:3000/events/schedule")
+        if(window.location.href !== document.location.origin + "/events/schedule")
         {
-            window.location.href=("http://localhost:3000/events/schedule")
+            window.location.href=(document.location.origin + "/events/schedule")
         }
     }
 
     goToEventsHome()
     {
-        if(window.location.href !== "http://localhost:3000/events/home")
+        if(window.location.href !== document.location.origin + "/events/home")
         {
-            window.location.href=("http://localhost:3000/events/home");
+            window.location.href=(document.location.origin + "/events/home");
         }
     }
     
@@ -65,16 +65,25 @@ class EventsBanner extends React.Component
         document.getElementById("column2").className = "hidden";
     }
 
+    showProjectButtons()
+    {
+        document.getElementById("project-buttons").className = "show-project-buttons";
+    }
+
+    hideProjectButtons()
+    {
+        document.getElementById("project-buttons").className = "hide-project-buttons";
+    }
+
     render()
     {
         //images
-        var banner = this.props.banner;
-        var bannerId = "banner";
-        var reducedBanner = this.props.reducedBanner;
-        var bannerType = this.props.type;
-        var color = this.props.color; //Only used if projectbanner is = to yes
-        var headerName = "header";
-        var mode = ".normal";
+        let banner = this.props.banner;
+        let bannerId = "banner";
+        let reducedBanner = this.props.reducedBanner;
+        let bannerType = this.props.type;
+        let color = this.props.color; //Only used if projectbanner is = to yes
+        let headerName = "header";
 
         if(bannerType === "project" && !(banner === undefined || banner === ""))
         {
@@ -101,141 +110,61 @@ class EventsBanner extends React.Component
             $("#" + headerName).css({"background-color": color});
         }
 
-        function normalDisplay()
-        {
-            //fix banner
-            var elements = document.querySelectorAll(mode);
-            elements.forEach(function (element)
-            {
-                if(element.id === bannerId && (banner === undefined || banner === ""))
-                {
-                    element.style.visibility = "hidden";
-                }
-                else if(element.id === bannerId && !(reducedBanner === undefined || reducedBanner === ""))
-                {
-                    element.className = "normal";
-                    element.src = banner;
-                }
-                else
-                {
-                    element.className = "normal";
-                }
-            });
-            mode = ".normal";
-        }
-
-        function reducedDisplay()
-        {
-            var elements = document.querySelectorAll(mode);
-            elements.forEach(function (element)
-            {
-                if(element.id === bannerId && (banner === undefined || banner === ""))
-                {
-                    element.style.visibility = "hidden";
-                }
-                else if(element.id === bannerId && !(reducedBanner === undefined || reducedBanner === ""))
-                {
-                    element.className = "reduced";
-                    element.src = reducedBanner;
-                }
-                else
-                {
-                    element.className = "reduced";
-                }
-            });
-            mode = ".reduced";
-        }
-
-        function mobileDisplay()
-        {
-            var elements = document.querySelectorAll(mode);
-            elements.forEach(function (element)
-            {
-                if(element.id === bannerId && (banner === undefined || banner === ""))
-                {
-                    element.style.visibility = "hidden";
-                }
-                else if(element.id === bannerId && !(reducedBanner === undefined || reducedBanner === ""))
-                {
-                    element.className = "mobile";
-                    element.src = reducedBanner;
-                }
-                else
-                {
-                    element.className = "mobile";
-                }
-            });
-            mode = ".mobile";
-        }
-
-        function resize()
-        {
-            var sw = window.screen.width;
-            var w = window.innerWidth;
-            //Menu control
-            if(document.getElementById("menu").className !== "menuinitialhide")
-            {
-                document.getElementById("menu").className = "menuhide";
-            }
-
-            if(sw < 530)
-            {
-                mobileDisplay()
-            }
-            else if(w < 900)
-            {
-                reducedDisplay()
-            }
-            else
-            {
-                normalDisplay()
-            }
-        }
-
         $(window).on('load', function()
         {
-            $(window).resize(function()
+            $(window).on('resize', function()
             {
-                resize()
+                document.getElementById("menu").className = "menuinitialhide";
             });
-            resize()
             setup()
         });
 
         return(
         <div id = {headerName}>
-            <img src={banner} id={bannerId} className = "normal" alt="Banner"/>
+            <img src={banner} id={bannerId} alt="Banner"/>
             <div id="navigation">
-                <button id = "menubutton" className = "normal">
-                    <img src={ReducedMenuImg} id = "reducedmenuimg" className = "normal" alt="Alternative Menu" onClick = {this.showMenu.bind(this)}/>
+                <button id = "menubutton">
+                    <img src={ReducedMenuImg} id = "reducedmenuimg" alt="Alternative Menu" onClick = {this.showMenu.bind(this)}/>
                 </button>
                 
                 <div id = "menu" className = "menuinitialhide">
-                    <button onClick={this.hideMenu.bind(this)} style = {{backgroundColor: "rgba(0, 0, 0, 0)", color: "white", textAlign: "left", position: "relative", left: "93.7%"}}>
-                        X
-                    </button>
-                    <button id = "menuprojects" className = "menunavbutton" onClick = {this.goToProjects.bind(this)}>
+                    <div id = "menu-close" onClick={this.hideMenu.bind(this)}>
+                        <h1>x</h1>
+                    </div>
+                    <div id = "menuhome" className = "alt-menu-button" onClick = {this.goToEventsHome.bind(this)}>
                         <h1>
-                            Projects
+                            About
                         </h1>
-                    </button>
-                    <button id = "menuschedule" className = "menunavbutton" onClick = {this.goToSchedule.bind(this)}>
-                        <h1>
-                            Schedule
-                        </h1>
-                    </button>
-
-                    <button id = "menuhome" className = "menunavbutton" onClick = {this.goToEventsHome.bind(this)}>
+                    </div>
+                    <div id = "menuschedule" className = "alt-menu-button" onClick = {this.goToSchedule.bind(this)}>
                         <h1>
                             Events
                         </h1>
-                    </button>
+                    </div>
+                    <div id = "menuprojects" className = "alt-menu-button" onClick = {this.goToProjects.bind(this)}
+                    onMouseOver = {this.showProjectButtons.bind(this)} onMouseLeave = {this.hideProjectButtons.bind(this)}>
+                        <h1>
+                            Projects
+                        </h1>
+                    </div>
+                    <div id = "project-buttons" className = "hide-project-buttons" onMouseOver = {this.showProjectButtons.bind(this)} onMouseLeave = {this.hideProjectButtons.bind(this)}>
+                        <button className = "mini-alt-menu-button" onClick = {this.goToProjects.bind(this)}>
+                            <h1>
+                                TShell
+                            </h1>
+                        </button>
+                        <button className = "mini-alt-menu-button" onClick = {this.goToProjects.bind(this)}>
+                            <h1>
+                                Office Hours
+                            </h1>
+                        </button>
+                    </div>
                 </div>
 
-                <img src={Logo} id = "logo" className = "normal" alt="IEEE"/>
-                <div id = "navcontainer" className = "normal" onMouseOver = {this.extendedMenuShow.bind(this)} onMouseLeave = {this.extendedMenuHide.bind(this)}>
+                <img src={Logo} id = "logo" alt="IEEE"/>
+                <div id = "navcontainer" onMouseOver = {this.extendedMenuShow.bind(this)} onMouseLeave = {this.extendedMenuHide.bind(this)}>
                     <div className = "enavbutton">
-                        <button id = "projectsbutton" className = "normal" onClick = {this.goToProjects.bind(this)}>
+                        <button id = "projectsbutton" onClick = {this.goToProjects.bind(this)}>
                             <h1>
                                 Projects
                             </h1>
@@ -246,7 +175,7 @@ class EventsBanner extends React.Component
                     </div>
 
                     <div className = "enavbutton">
-                        <button id = "schedulebutton" className = "normal" onClick = {this.goToSchedule.bind(this)}>
+                        <button id = "schedulebutton" onClick = {this.goToSchedule.bind(this)}>
                             <h1>
                                 Events
                             </h1>
@@ -257,7 +186,7 @@ class EventsBanner extends React.Component
                     </div>
 
                     <div className = "enavbutton">
-                        <button id = "homebutton" className = "normal" onClick = {this.goToEventsHome.bind(this)}>
+                        <button id = "homebutton" onClick = {this.goToEventsHome.bind(this)}>
                             <h1>
                                 About
                             </h1>
@@ -273,13 +202,13 @@ class EventsBanner extends React.Component
                         <div id = "rightline" className = "hidden"/>
                         <div id = "columns" className = "hidden">
                             <div id = "column1" className = "hidden">
-                                <ProjectsButton id = "TShell" display = "Project TShell" link = "http://localhost:3000/events/projects/TShell"/>
-                                <ProjectsButton id = "OfficeHours" display = "Office Hours" link = "http://localhost:3000/events/projects/OfficeHours"/>
+                                <ProjectsButton id = "TShell" display = "Project TShell" link = {document.location.origin + "/events/projects/TShell"}/>
+                                <ProjectsButton id = "OfficeHours" display = "Office Hours" link = {document.location.origin + "/events/projects/OfficeHours"}/>
                             </div>
                             {/* Add new button for every added featured projects */}
                             <div id = "column2" className = "hidden">
-                                <ProjectsButton id = "coding-night" display = "Coding Night" link = "http://localhost:3000/events/coding-night"/>
-                                <ProjectsButton id = "workshop-archive" display = "Past Workshops" link = "http://localhost:3000/events/workshop-archive"/>
+                                <ProjectsButton id = "coding-night" display = "Coding Night" link = {document.location.origin +  "/events/coding-night"}/>
+                                <ProjectsButton id = "workshop-archive" display = "Past Workshops" link = {document.location.origin + "/events/workshop-archive"}/>
                             </div>
                         </div>
                     </div>

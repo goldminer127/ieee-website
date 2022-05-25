@@ -1,41 +1,106 @@
-body
+@media screen and (min-width: 901px)
+{
+    /* Wigets */
+    #discordwiget
+    {
+        width: 40%;
+        height: 85%;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    #eventsmaindescriptiontitle
+    {
+        width: 50%;
+        left: 40px;
+        position: relative;
+        font-size: 50px;
+    }
+
+    #eventsmaindescriptionbody
+    {
+        width: 50%;
+        position: relative;
+        left: 40px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px)
+{
+    /* Wigets */
+    #discordwiget
+    {
+        width: 75%;
+        height: 500px;
+        align-content: center;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 20px;
+    }
+
+    #eventsmaindescriptiontitle
+    {
+        position: relative;
+        font-size: 50px;
+        width: 75%;
+        transform: translateX(-50%);
+        left: 50%;
+        text-align: center;
+    }
+
+    #eventsmaindescriptionbody
+    {
+        width: 75%;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    /* Wigets */
+    #discordwiget
+    {
+        width: 75%;
+        height: 500px;
+        align-content: center;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 20px;
+    }
+
+    #eventsmaindescriptiontitle
+    {
+        position: relative;
+        font-size: 50px;
+        width: 75%;
+        transform: translateX(-50%);
+        left: 50%;
+        text-align: center;
+    }
+
+    #eventsmaindescriptionbody
+    {
+        width: 75%;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        font-size: 25px;
+    }
+}
+
+/* Common */
+
+#events-body
 {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Wigets */
-#discordwiget
-{
-    position: absolute;
-    top: 20px;
-    right: 30px;
-}
-
-#discordwiget.normal
-{
-    width: 40%;
-    height: 85%;
-}
-
-#discordwiget.reduced
-{
-    width: 75%;
-    height: 500px;
-    align-content: center;
-    position: relative;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-#discordwiget.mobile
-{
-    width: 75%;
-    height: 500px;
-    align-content: center;
-    position: relative;
-    transform: translateX(-50%);
-    left: 50%;
 }
 
 /* Description Components */
@@ -50,64 +115,9 @@ body
     position: relative;
     color: rgb(255, 255, 255);
     background-color: rgb(41, 41, 41);
-    padding-top:20px;
-    padding-bottom:100px;
-}
-
-#eventsmaindescriptiontitle
-{
-    position: relative;
-    font-size: 50px;
-}
-
-#eventsmaindescriptiontitle.normal
-{
-    width: 50%;
-    left: 40px;
-}
-
-#eventsmaindescriptiontitle.reduced
-{
-    width: 75%;
-    transform: translateX(-50%);
-    left: 50%;
-    text-align: center;
-}
-
-#eventsmaindescriptiontitle.mobile
-{
-    width: 75%;
-    transform: translateX(-50%);
-    left: 50%;
-    text-align: center;
-}
-
-#eventsmaindescriptionbody
-{
-    width: 50%;
-    position: relative;
-    left: 40px;
-    font-size: 25px;
-}
-
-#eventsmaindescriptionbody.normal
-{
-    width: 50%;
-    left: 40px;
-}
-
-#eventsmaindescriptionbody.reduced
-{
-    width: 75%;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-#eventsmaindescriptionbody.mobile
-{
-    width: 75%;
-    transform: translateX(-50%);
-    left: 50%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 3rem;
 }
 
 #featuredvideo
@@ -143,4 +153,5 @@ body
     transform: translateX(-50%);
     left: 50%;
     font-size: 25px;
+    line-height: 3rem;
 }

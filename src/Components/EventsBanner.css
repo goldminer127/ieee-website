@@ -1,7 +1,389 @@
+/* Normal Display */
+@media screen and (min-width: 901px)
+{
+    /*Banner Components*/
+    #banner
+    {
+        z-index: 3;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #projectbanner
+    {
+        z-index: 3;
+        height: 450px;
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #eventbanner
+    {
+        z-index: 3;
+        width: 130%;
+        height: calc(650px - 180px);
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #logo
+    {
+        z-index: 3;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+    }
+
+    /* Navigation Main */
+    #navcontainer
+    {
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        width: 32%;
+        height: 130px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        visibility: visible;
+    }
+
+    #projectsbutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: visible;
+
+        /* Text */
+        color: white;
+    }
+
+    #schedulebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: visible;
+
+        /* Text */
+        color: white;
+    }
+
+    #homebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: visible;
+
+        /* Text */
+        color: white;
+    }
+
+    /* Triple bars */
+    #menubutton
+    {
+        z-index: 3;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: left;
+        visibility: hidden;
+    }
+
+    #reducedmenuimg
+    {
+        z-index: 3;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        visibility: hidden;
+    }
+
+
+}
+
+/* Reduced Display */
+@media screen and (max-width: 900px) and (min-width: 601px)
+{
+    #banner
+    {
+        z-index: 3;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #projectbanner
+    {
+        z-index: 3;
+        height: 450px;
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #eventbanner
+    {
+        z-index: 3;
+        width: 130%;
+        height: calc(650px - 180px);
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #logo
+    {
+        z-index: 3;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 50%;
+    }
+
+    /* Navigation Main */
+    #navcontainer
+    {
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        width: 32%;
+        height: 130px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        visibility: hidden;
+    }
+
+    #projectsbutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    #schedulebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    #homebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    /* Triple bars */
+    #menubutton
+    {
+        z-index: 3;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: left;
+        visibility: visible;
+    }
+
+    #reducedmenuimg
+    {
+        z-index: 3;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        animation: slowshow 1s;
+    }
+}
+
+/* Mobile Display */
+@media screen and (max-width: 600px)
+{
+    #banner
+    {
+        z-index: 3;
+        width: auto;
+        height: 24.5rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #projectbanner
+    {
+        z-index: 3;
+        height: 300px;
+        position: absolute;
+        top: 260px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #eventbanner
+    {
+        z-index: 3;
+        width: 100%;
+        height: 470px;
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #logo
+    {
+        z-index: 3;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 60%;
+    }
+
+    /* Navigation Main */
+    #navcontainer
+    {
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        width: 32%;
+        height: 130px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        visibility: hidden;
+    }
+
+    #projectsbutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    #schedulebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    #homebutton
+    {
+        z-index: 3;
+        text-align: left;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        cursor: pointer;
+        padding-top: 1rem;
+        visibility: hidden;
+
+        /* Text */
+        color: white;
+    }
+
+    /* Triple bars */
+    #menubutton
+    {
+        z-index: 3;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: left;
+        visibility: visible;
+    }
+
+    #reducedmenuimg
+    {
+        z-index: 3;
+        height: 30%;
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        animation: slowshow 1s;
+    }
+}
+/* Common */
+
 #header
 {
     width: 100%;
-    height: 750px;
 }
 
 #projectHeader
@@ -22,155 +404,18 @@
    opacity: 0; 
 }
 
-/*Banner Components*/
-#banner
-{
-    z-index: 3;
-    width: 100%;
-    height: 750px;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-}
-
-#banner.normal
-{
-    width: 130%;
-}
-
-#banner.mobile
-{
-    left: 0%;
-}
-
-#projectbanner
-{
-    z-index: 3;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-}
-
-#projectbanner.normal
-{
-    height: 450px;
-    top: 190px;
-}
-
-#projectbanner.reduced
-{
-    height: 450px;
-    top: 190px;
-}
-
-#projectbanner.mobile
-{
-    height: 300px;
-    top: 260px;
-}
-
-#eventbanner
-{
-    z-index: 3;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-}
-
-#eventbanner.normal
-{
-    width: 130%;
-    height: calc(650px - 180px);
-    top: 180px
-}
-
-#eventbanner.reduced
-{
-    width: 130%;
-    height: calc(650px - 180px);
-    top: 180px;
-}
-
-#eventbanner.mobile
-{
-    height: 470px;
-    top: 180px;
-}
-
-#logo
-{
-    z-index: 3;
-    height: 80%;
-    position: absolute;
-    top: 50%;
-}
-
-#logo.normal
-{
-    left: 14px;
-    transform: translateY(-50%);
-}
-
-#logo.reduced
-{
-    transform: translate(-50%,-50%);
-    left: 50%;
-}
-
-#logo.mobile
-{
-    height: 50%;
-    transform: translate(-50%,-50%);
-    left: 60%;
-}
-
 /* Navigation Main */
 #navigation
 {
     z-index: 3;
     background-color: rgba(42, 0, 51, 0.8);
     width: 100%;
-    height: 125px;
+    height: 7.813rem;
     position: absolute;
     top: 50px;
-    left: 0px;
+    left: 0;
     border-top: 3px solid orange;
     border-bottom: 5px double orange;
-}
-
-#navcontainer
-{
-    z-index: 3;
-    display: flex;
-    justify-content: flex-end;
-    width: 32%;
-    height: 130px;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translateY(-50%);
-}
-
-#navcontainer.normal
-{
-    visibility: visible;
-}
-
-#navcontainer.reduced
-{
-    visibility: hidden;
-}
-
-#navcontainer.mobile
-{
-    visibility: hidden;
 }
 
 .enavbutton
@@ -180,91 +425,9 @@
     background-color: rgba(0, 0, 0, 0);
     position: relative;
     right: 2%;
-    text-align: left;
-    padding-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-#projectsbutton
-{
-    z-index: 3;
-    text-align: left;
-    background-color: rgba(49, 49, 49, 0);
-    border: none;
-    cursor: pointer;
-
-    /* Text */
-    color: white;
-}
-
-#projectsbutton.normal
-{
-    visibility: visible;
-}
-
-#projectsbutton.reduced
-{
-    visibility: hidden;
-}
-
-#projectsbutton.mobile
-{
-    visibility: hidden;
-}
-
-#schedulebutton
-{
-    z-index: 3;
-    text-align: left;
-    background-color: rgba(49, 49, 49, 0);
-    border: none;
-    cursor: pointer;
-
-    /* Text */
-    color: white;
-}
-
-#schedulebutton.normal
-{
-    visibility: visible;
-}
-
-#schedulebutton.reduced
-{
-    visibility: hidden;
-}
-
-#schedulebutton.mobile
-{
-    visibility: hidden;
-}
-
-#homebutton
-{
-    z-index: 3;
-    text-align: left;
-    background-color: rgba(49, 49, 49, 0);
-    border: none;
-    cursor: pointer;
-
-    /* Text */
-    color: white;
-}
-
-#homebutton.normal
-{
-    visibility: visible;
-}
-
-#homebutton.reduced
-{
-    visibility: hidden;
-}
-
-#homebutton.mobile
-{
-    visibility: hidden;
+    padding-top: 1.25rem;
+    padding-left: 1.563rem;
+    padding-right: 1.563rem;
 }
 
 /* Extended Menu */
@@ -276,8 +439,8 @@
 
 .extendedmenushow
 {
-    width: 475px;
-    height: 300px;
+    width: 30rem;
+    height: 18.75rem;
     background-color: rgba(43, 43, 43, 1);
     position: absolute;
     top: calc(100% + 1px);
@@ -292,46 +455,46 @@
 
 #column1
 {
-    width: 150px;
-    height: 300px;
+    width: 10rem;
+    height: 18.75rem;
 }
 
 #column2
 {
-    width: 150px;
-    height: 300px;
+    width: 10rem;
+    height: 18.75rem;
     position: absolute;
     left: 150px;
-    top: 0px;
+    top: 0;
 }
 
 .leftline
 {
-    width: 3px;
-    height: 303px;
+    width: 0.2rem;
+    height: 18.95rem;
     background-color: orange;
     position: absolute;
-    left: -3px;
+    left: -0.2rem;
     animation: leftlineshow .25s;
 }
 
 .bottomline
 {
-    width: 500px;
-    height: 3px;
+    width: 30.2rem;
+    height: 0.2rem;
     background-color: orange;
     position: absolute;
-    bottom: -3px;
+    bottom: -0.2rem;
     animation: bottomlineshow .50s;
 }
 
 .rightline
 {
-    width: 3px;
-    height: 303px;
+    width: 0.2rem;
+    height: 18.95rem;
     background-color: orange;
     position: absolute;
-    right: -3px;
+    right: -0.2rem;
     animation: rightlineshow .75s;
 }
 
@@ -347,62 +510,51 @@
     top: 0%;
 }
 
-/* Triple bars */
-#menubutton
+#menu-close
 {
-    z-index: 3;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    text-align: left;
-}
-
-#menubutton.normal
-{
-    visibility: hidden;
-}
-
-#menubutton.reduced
-{
-    left: 0px;
-    visibility: visible;
-}
-
-#menubutton.mobile
-{
-    left: 0px;
-    visibility: visible;
-}
-
-#reducedmenuimg
-{
-    z-index: 3;
-    height: 40%;
+    width: 2rem;
+    height: 2.4rem;
+    background-color: rgba(43, 43, 43, 1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: .15in;
     position: absolute;
-    top: 50%;
-    left: 14px;
-    transform: translateY(-50%);
-    cursor: pointer;
+    left: 100%;
 }
 
-#reducedmenuimg.normal
+#menu-close:hover
 {
-    visibility: hidden;
+    background-color: rgb(245, 0, 0);
 }
 
-#reducedmenuimg.reduced
+#project-buttons
 {
-    animation: slowshow 1s;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
 }
 
-#reducedmenuimg.mobile
+.hide-project-buttons
 {
-    animation: slowshow 1s;
+    animation: hideprojectsbuttons .25s;
+    height: 0;
+    overflow: hidden;
 }
 
-.menunavbutton
+.show-project-buttons
+{
+    animation: showprojectsbuttons 1s;
+    padding-top: 2rem;
+    height: 6rem;
+    border-bottom: 2px solid white;
+}
+
+.alt-menu-button
 {
     /* Container */
-    width: 100%;
+    width: calc(100% - 1rem);
     z-index: 4;
     border-top: none;
     border-bottom: 2px solid white;
@@ -411,7 +563,7 @@
     background-color: rgba(0, 0, 0, 0);
     text-align: left;
     cursor: pointer;
-    padding: 1px 6%;
+    padding: .5rem;
 
     /* Text */
     color: white;
@@ -419,10 +571,30 @@
     left: 0%;
 }
 
-.menunavbutton:hover
+h1
+{
+    margin: 0;
+}
+
+.alt-menu-button:hover
 {
     background-color: rgb(172, 112, 0);
+}
+
+.mini-alt-menu-button
+{
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0);
     border: none;
+
+    /* Text */
+    color: white;
+    font-size: .125in;
+}
+
+.mini-alt-menu-button:hover
+{
+    background-color: rgb(172, 112, 0);
 }
 
 
@@ -433,7 +605,7 @@
 
 .menushow
 {
-    left: 0px;
+    left: 0;
     animation: slowmenushow 1s;
 }
 
@@ -459,11 +631,11 @@
 /* Reduced Menu */
 @keyframes slowmenushow {
     0% {left: -400px;}
-    100% {left: 0px;}
+    100% {left: 0;}
 }
 
 @keyframes slowmenuhide {
-    0% {left: 0px;}
+    0% {left: 0;}
     100% {left: -400px;}
 }
 
@@ -475,22 +647,22 @@
 }
 
 @keyframes leftlineshow {
-    0% {height: 0px;}
-    100% {height: 303px;}
+    0% {height: 0;}
+    100% {height: 18.95rem;}
 }
 
 @keyframes bottomlineshow {
-    0% {width: 0px;}
-    50% {width: 0px;}
-    100% {width: 500px;}
+    0% {width: 0;}
+    50% {width: 0;}
+    100% {width: 30.2rem;}
 }
 
 @keyframes rightlineshow {
-    0% {height: 0px; top: 303px;}
+    0% {height: 0; top: 18.95rem;}
 
-    66% {height: 0px; top: 303px;}
+    66% {height: 0; top: 18.95rem;}
 
-    100% {height: 303px; top: 0px;}
+    100% {height: 18.95rem; top: 0;}
 }
 
 @keyframes columnshow
@@ -498,4 +670,40 @@
     0% {opacity: 0;}
     75% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@keyframes showprojectsbuttons
+{
+    0%
+    {
+        overflow: hidden; 
+        border-bottom: 2px solid white;
+        padding-top: 0;
+        height: 0; 
+    }
+    100%
+    {
+        overflow: visible; 
+        border-bottom: 2px solid white;
+        padding-top: 2rem;
+        height: 6rem;
+    }
+}
+
+@keyframes hideprojectsbuttons
+{
+    0%
+    {
+        overflow: hidden; 
+        border-bottom: 2px solid white;
+        padding-top: 2rem;
+        height: 6rem;
+    }
+    100%
+    {
+        overflow: hidden; 
+        border-bottom: none;
+        padding-top: 0;
+        height: 0;
+    }
 }

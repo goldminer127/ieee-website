@@ -1,4 +1,6 @@
 import './App.css';
+import About from './pages/AboutPages/About.js'
+import BoardMembers from './pages/BoardMembers/Members.js'
 import Home from './pages/Home.js'
 import EventsHome from './pages/EventsPages/EventsHome.js'
 import Projects from './pages/EventsPages/Projects.js'
@@ -17,6 +19,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/members" element={<BoardMembers/>}/>
           <Route path="/events/home" element={<EventsHome/>}/>
           <Route path="/events/projects" element={<Projects/>}/>
           <Route path="/events/schedule" element={<Schedule/>}/>

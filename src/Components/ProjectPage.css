@@ -1,127 +1,196 @@
-#pagemaindescription
+/* Normal Display */
+@media screen and (min-width: 901px)
 {
-    position: relative;
-    top: 40px;
-    line-height: .6in;
+    #pagemaindescription
+    {
+        position: relative;
+        width: 100%;
+        top: 40px;
+        line-height: .6in;
+    }
+
+    #pagemaindescriptiontitle
+    {
+        text-align: center;
+        width: 50%;
+        font-size: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #pagemaindescriptionbody
+    {
+        font-size: 25px;
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #featureimages
+    {
+        width: 800px;
+        height: 400px;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    #arrowbackward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 40px;
+        cursor: pointer;
+    }
+
+    #arrowforward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: calc(100% - 40px);
+        cursor: pointer;
+    }
 }
 
-#pagemaindescription.normal
+/* Reduced Display */
+@media screen and (max-width: 900px) and (min-width: 601px)
 {
-    width: 100%;
+    #pagemaindescription
+    {
+        position: relative;
+        width: 100%;
+        top: 40px;
+        line-height: .6in;
+    }
+
+    #pagemaindescriptiontitle
+    {
+        text-align: center;
+        width: 75%;
+        font-size: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #pagemaindescriptionbody
+    {
+        font-size: 25px;
+        width: 75%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #featureimages
+    {
+        width: 525px;
+        height: 275px;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    #arrowbackward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 40px;
+        cursor: pointer;
+    }
+
+    #arrowforward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: calc(100% - 40px);
+        cursor: pointer;
+    }
 }
 
-#pagemaindescription.reduced
+/* Mobile Display */
+@media screen and (max-width: 600px)
 {
-    width: 100%;
+    #pagemaindescription
+    {
+        position: relative;
+        width: 100%;
+        top: 40px;
+        line-height: .6in;
+    }
+
+    #pagemaindescriptiontitle
+    {
+        text-align: center;
+        width: 75%;
+        font-size: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #pagemaindescriptionbody
+    {
+        font-size: 25px;
+        width: 75%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: .6in;
+    }
+
+    #featureimages
+    {
+        width: calc(100%);
+        height: 12rem;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    #arrowbackward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 3rem;
+        cursor: pointer;
+    }
+
+    #arrowforward
+    {
+        z-index: 3;
+        height: 50px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 3rem;
+        cursor: pointer;
+    }
 }
 
-#pagemaindescription.mobile
-{
-    width: 100%;
-}
-
-#pagemaindescriptiontitle
-{
-    text-align: center;
-    font-size: 50px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: .6in;
-}
-
-#pagemaindescriptiontitle.normal
-{
-    width: 50%;
-}
-
-#pagemaindescriptiontitle.reduced
-{
-    width: 75%;
-}
-
-#pagemaindescriptiontitle.mobile
-{
-    width: 75%;
-}
-
-#pagemaindescriptionbody
-{
-    font-size: 25px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: .6in;
-}
-
-#pagemaindescriptionbody.normal
-{
-    width: 50%;
-}
-
-#pagemaindescriptionbody.reduced
-{
-    width: 75%;
-}
-
-#pagemaindescriptionbody.mobile
-{
-    width: 75%;
-}
-
-#featureimages
-{
-    width: 800px;
-    height: 400px;
-    position: relative;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-#featureimages.reduced
-{
-    width: 525px;
-    height: 275px;
-}
-
-#featureimages.mobile
-{
-    width: 525px;
-    height: 275px;
-}
-
-#arrowbackward
-{
-    z-index: 3;
-    height: 50px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 40px;
-    cursor: pointer;
-}
-
-#arrowbackward.mobile
-{
-    left: 100px;
-}
-
-#arrowforward
-{
-    z-index: 3;
-    height: 50px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: calc(100% - 40px);
-    cursor: pointer;
-}
-
-#arrowforward.mobile
-{
-    left: calc(100% - 100px);
-}
-
+/* Common */
 .emptyimg
 {
     position: absolute;

@@ -4,7 +4,11 @@ class ProjectsButton extends React.Component
     constructor(props)
     {
         super(props);
-        this.state = {link: "error"};
+        this.state = {
+            id: undefined,
+            display: undefined,
+            link: "error"
+        };
     }
 
     goToLink()
@@ -25,22 +29,24 @@ class ProjectsButton extends React.Component
     {
         document.getElementById(this.state.id).style.backgroundColor = "rgba(43, 43, 43, 1)";
     }
+
+    static getDerivedStateFromProps(props, state)
+    {
+        return {
+            id: props.id,
+            display: props.display,
+            link: props.link
+        };
+    }
     
     render()
     {
-        //"Properties"
-        var id = this.props.id;
-        var display = this.props.display;
-        var link = this.props.link;
-
-        //This is bad practice, only do here. (Change later)
-        this.state = {link: link, id: id};
         return (
-            <button id = {id} onClick = {this.goToLink.bind(this)} onMouseOver = {this.hoverState.bind(this)}
+            <button id = {this.state.id} onClick = {this.goToLink.bind(this)} onMouseOver = {this.hoverState.bind(this)}
                 onMouseLeave = {this.defaultState.bind(this)} style = {{backgroundColor: "rgba(43, 43, 43, 1)", width: "150px",
                 height: "50px", textAlign: "left", border: "none"}}>
                     <p style = {{color: "white", fontSize: "16px", position: "relative", left: "5px"}}>
-                        {display}
+                        {this.state.display}
                     </p>
             </button>
         );

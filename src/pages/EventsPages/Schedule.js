@@ -9,10 +9,10 @@ function Schedule()
         <div id = "schedule-page-body">
             <Header color = "rgb(41, 41, 41)"/>
             <div id = "schedule-container">
-                <h1 id = "schedule-title" className = "normal">
+                <h1 id = "schedule-title">
                     Spring February 6th - 12th
                 </h1>
-                <div id = "card-container" className = "normal">
+                <div id = "card-container">
                     <div className = "event-card">
                         <WorkshopCard
                             name = "General Interest Meeting for SWE and NSBE"

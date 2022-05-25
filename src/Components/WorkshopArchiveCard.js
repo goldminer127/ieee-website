@@ -15,6 +15,8 @@ class WorkshopArchiveCard extends React.Component
             description: undefined,
             youtube: undefined,
             thumbnail: undefined,
+            semester: undefined,
+            year: undefined
         }
     }
 
@@ -29,28 +31,28 @@ class WorkshopArchiveCard extends React.Component
             thumbnail = EmptyThumbnail;
         }
         return{
-            id: props.id,
+            id: props.name + props.semester + props.year,
             name: props.name,
             description: description,
             youtube: props.youtube,
             thumbnail: thumbnail,
+            semester: props.semester,
+            year: props.year
         };
     }
 
     showSubsection()
     {
-        var element = $("#" + this.state.id);
-        if(element.hasClass("card-hide"))
-            element.removeClass("card-hide");
-        element.addClass("card-show");
+        var element = document.getElementById(this.state.id);
+        if(element.className === "card-hide")
+            element.className = "card-show";
     }
 
     hideSubsection()
     {
-        var element = $("#" + this.state.id);
-        if(element.hasClass("card-show"))
-            element.removeClass("card-show");
-        element.addClass("card-hide");
+        var element = document.getElementById(this.state.id);
+        if(element.className === "card-show")
+            element.className = "card-hide";
     }
 
     goToLink()
@@ -63,12 +65,12 @@ class WorkshopArchiveCard extends React.Component
         if(this.state.youtube === undefined || this.state.youtube === "")
         {
             return(
-                <div id = "workshop-archive-card" className = "normal" onMouseOver={this.showSubsection.bind(this)} onMouseLeave={this.hideSubsection.bind(this)}>
+                <div className = "workshop-archive-card" onClick={() => this.showSubsection()} onMouseLeave={this.hideSubsection.bind(this)}>
                     <h3>{this.state.name}</h3>
                     <div id = {this.state.id} className="card-hide">
                         <p>{this.state.description}</p>
-                        <div id = "archive-card-images">
-                            <img id = "archive-thumbnail" src = {this.state.thumbnail}/>
+                        <div className = "archive-card-images">
+                            <img className = "archive-thumbnail" alt = "event thumbnail" src = {this.state.thumbnail}/>
                         </div>
                     </div>
                 </div>
@@ -77,13 +79,13 @@ class WorkshopArchiveCard extends React.Component
         else
         {
             return(
-                <div id = "workshop-archive-card" className = "normal" onMouseOver={this.showSubsection.bind(this)} onMouseLeave={this.hideSubsection.bind(this)}>
+                <div className = "workshop-archive-card" onClick={() => this.showSubsection()} onMouseLeave={this.hideSubsection.bind(this)}>
                     <h3>{this.state.name}</h3>
                     <div id = {this.state.id} className="card-hide">
                         <p>{this.state.description}</p>
-                        <div id = "archive-card-images" onClick = {this.goToLink.bind(this)}>
-                            <img id = "archive-play-button" src = {PlayButton}/>
-                            <img id = "archive-thumbnail" src = {this.state.thumbnail}/>
+                        <div className = "archive-card-images" onClick = {this.goToLink.bind(this)}>
+                            <img className = "archive-play-button" alt = "play button" src = {PlayButton}/>
+                            <img className = "archive-thumbnail" alt = "event thumbnail" src = {this.state.thumbnail}/>
                         </div>
                     </div>
                 </div>

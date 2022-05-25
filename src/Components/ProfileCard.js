@@ -23,10 +23,10 @@ class ProfileCard extends React.Component
 
     static getDerivedStateFromProps(props, state)
     {
-        var avatar = props.avatar;
-        var membership = props.membership;
-        var cardColor = props.cardColor;
-        var textColor = props.textColor;
+        let avatar = props.avatar;
+        let membership = props.membership;
+        let cardColor = props.cardColor;
+        let textColor = props.textColor;
         if(avatar === undefined || avatar === "")
             avatar = EmptyProfile;
         if(membership === undefined || membership === "")
@@ -56,40 +56,35 @@ class ProfileCard extends React.Component
         window.open(this.state.linkedinLink);
     }
 
+    setup()
+    {
+        let githubLink = this.state.githubLink;
+        let linkedinLink = this.state.linkedinLink;
+        if(githubLink === undefined || githubLink === "")
+        {
+            $("#" + this.state.name + "github").css({"visibility": "hidden", "width": "0px"})
+            $("#" + this.state.name + "linkedin").css({"transform": "translateX(-150px)"})
+        }
+        if(linkedinLink === undefined || linkedinLink === "")
+        {
+            document.getElementById(this.state.name + "linkedin").style.visibility = "hidden";
+        }
+    }
+
     render()
     {
-        var githubLink = this.state.githubLink;
-        var linkedinLink = this.state.linkedinLink;
-        function setup()
-        {
-            if(githubLink === undefined || githubLink === "")
-            {
-                $("#githubbutton").css({"visibility": "hidden", "width": "0px"})
-                $("#linkedinbutton").css({"transform": "translateX(-150px)"})
-            }
-            if(linkedinLink === undefined || linkedinLink === "")
-            {
-                document.getElementById("linkedinbutton").style.visibility = "hidden";
-            }
-        }
-
-        $(window).on('load', function()
-        {
-            setup();
-        });
-
         return(
-            <div className = "normal" id = "profilecard" style = {{backgroundColor: this.state.cardColor}}>
-                <img className = "normal" src = {this.state.avatar} id = "profileimage" alt = "Profile"/>
-                <h1 className = "normal" id = "name" style = {{color: this.state.textColor}}>{this.state.name}</h1>
-                <h2 className = "normal" id = "membership" style = {{color: this.state.textColor}}>{this.state.membership}</h2>
-                <div className = "normal" id = "githubbutton" onClick = {this.goToGithub.bind(this)}>
-                    <img id = "githubimg" src = {Github} alt = "Github"/>
-                    <p id = "githubname">github</p>
+            <div className = "profilecard" style = {{backgroundColor: this.state.cardColor}}>
+                <img src = {this.state.avatar} id = "profileimage" alt = "Profile"/>
+                <h1 id = "name" style = {{color: this.state.textColor}}>{this.state.name}</h1>
+                <h2 id = "membership" style = {{color: this.state.textColor}}>{this.state.membership}</h2>
+                <div id = {this.state.name + "github"} className = "githubbutton" onClick = {this.goToGithub.bind(this)}>
+                    <img className = "githubimg" src = {Github} alt = "Github"/>
+                    <p className = "githubname">github</p>
                 </div>
-                <div className = "normal" id = "linkedinbutton" onClick = {this.goToLinkedin.bind(this)}>
-                    <img id = "linkedinimg" src = {Linkedin} alt = "LinkedIn"/>
-                    <p id = "linkedinname">linkedin</p>
+                <div id = {this.state.name + "linkedin"} className = "linkedinbutton" onClick = {this.goToLinkedin.bind(this)}>
+                    <img className = "linkedinimg" src = {Linkedin} alt = "LinkedIn"/>
+                    <p className = "linkedinname">linkedin</p>
                 </div>
             </div>
         );
