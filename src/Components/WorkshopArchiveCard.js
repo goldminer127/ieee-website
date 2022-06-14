@@ -1,25 +1,12 @@
 import React from "react";
 import EmptyThumbnail from "./images/EmptyThumbnail.jpg"
+import FolderTop from "./images/FolderTop.png"
 import PlayButton from "./images/YoutubePlayButton.png"
 import "./WorkshopArchiveCard.css"
 import $ from 'jquery'
 
 class WorkshopArchiveCard extends React.Component
 {
-    constructor(state)
-    {
-        super(state);
-        this.state = {
-            id: undefined,
-            name: undefined,
-            description: undefined,
-            youtube: undefined,
-            thumbnail: undefined,
-            semester: undefined,
-            year: undefined
-        }
-    }
-
     static getDerivedStateFromProps(props, state)
     {
         var description = props.description;
@@ -37,60 +24,51 @@ class WorkshopArchiveCard extends React.Component
             youtube: props.youtube,
             thumbnail: thumbnail,
             semester: props.semester,
-            year: props.year
+            year: props.year,
         };
     }
 
-    showSubsection()
+    formatImage()
     {
-        var element = document.getElementById(this.state.id);
-        if(element.className === "card-hide")
-            element.className = "card-show";
+        if(this.state.youtube == "")
+        {
+            return(<img className = "workshop-archive-thumbnail" src = {this.state.thumbnail}/>);
+        }
+        else
+        {
+            return(<img className = "workshop-archive-thumbnail" src = {this.state.thumbnail}/>)
+        }
     }
 
-    hideSubsection()
+    positionCard()
     {
-        var element = document.getElementById(this.state.id);
-        if(element.className === "card-show")
-            element.className = "card-hide";
-    }
-
-    goToLink()
-    {
-        window.open(this.state.youtube);
+        let element = document.getElementById(this.state.id);
+        element.className = "workshop-archive-card";
+        $("#" + this.state.id).css({"position": "absolute", "left": (visualViewport.width/2) - (element.offsetWidth / 2),
+        "top": (visualViewport.height / 2) - (element.offsetHeight / 2)});
     }
 
     render()
     {
-        if(this.state.youtube === undefined || this.state.youtube === "")
-        {
-            return(
-                <div className = "workshop-archive-card" onClick={() => this.showSubsection()} onMouseLeave={this.hideSubsection.bind(this)}>
-                    <h3>{this.state.name}</h3>
-                    <div id = {this.state.id} className="card-hide">
-                        <p>{this.state.description}</p>
-                        <div className = "archive-card-images">
-                            <img className = "archive-thumbnail" alt = "event thumbnail" src = {this.state.thumbnail}/>
+        return(
+            <div className = "workshop-archive-card">
+                <div id = {this.state.id + "text"}>
+                    <h2 className = "workshop-archive-text">Hello</h2>
+                </div>
+                <div id = {this.state.id} className = "hidden">
+                    <div className = "folder-top">
+                        <img className = "folder-top-img" src = {FolderTop}/>
+                    </div>
+                    <div className = "folder-body">
+                        <div className = "workshop-archive-card-body">
+                            <h1 className = "workshop-archive-title">{this.state.name}</h1>
+                            <p className = "workshop-archive-description">{this.state.description}</p>
+                            {this.formatImage()}
                         </div>
                     </div>
                 </div>
-            );
-        }
-        else
-        {
-            return(
-                <div className = "workshop-archive-card" onClick={() => this.showSubsection()} onMouseLeave={this.hideSubsection.bind(this)}>
-                    <h3>{this.state.name}</h3>
-                    <div id = {this.state.id} className="card-hide">
-                        <p>{this.state.description}</p>
-                        <div className = "archive-card-images" onClick = {this.goToLink.bind(this)}>
-                            <img className = "archive-play-button" alt = "play button" src = {PlayButton}/>
-                            <img className = "archive-thumbnail" alt = "event thumbnail" src = {this.state.thumbnail}/>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
+            </div>
+        );
     }
 }
 export default WorkshopArchiveCard;

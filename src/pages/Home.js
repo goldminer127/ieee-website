@@ -192,7 +192,7 @@ function Home()
     return (
       <div id = "home-body">
         <embed src="" id="embed-display" class="closedembed"/>
-        <button id = "closebutton" onClick={() => closePage('embed-display')}><p style={{fontSize: "27px", color: "white"}}>X</p></button>
+        <button id = "closebutton" onClick={() => closePage('embed-display')}><p style={{fontSize: "27px", color: "white", margin: "0"}}>X</p></button>
         
         <div id = "pcb">
           <div id = "cpu" className = "neutral-cpu"><h1 id = "cpu-label">IEEE</h1></div>

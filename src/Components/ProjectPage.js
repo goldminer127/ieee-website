@@ -9,24 +9,6 @@ import $ from 'jquery'
 
 class ProjectPage extends React.Component
 {
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            mainBanner: undefined,
-            reducedBanner: undefined,
-            colorPattern: undefined,
-            images: undefined,
-            projectName: undefined,
-            description: undefined,
-            avatar: undefined,
-            name: undefined,
-            membership: undefined,
-            githublink: undefined,
-            linkedinlink: undefined,
-        };
-    }
-
     static getDerivedStateFromProps(props, state)
     {
         let pattern = props.colorPattern;

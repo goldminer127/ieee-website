@@ -3,14 +3,13 @@
   #closebutton
   {
     z-index: 4;
-    height: 65px;
+    height: 3rem;
     width: 60px;
     position: absolute;
     right: .7rem;
     border: none;
     background-color: rgba(43,43,43,0.75);
     visibility: hidden;
-    transform: translateY(-30%);
     cursor: pointer;
   }
 }
@@ -20,14 +19,13 @@
   #closebutton
   {
     z-index: 4;
-    height: 65px;
+    height: 3rem;
     width: 60px;
     position: absolute;
     right: .7rem;
     border: none;
     background-color: rgba(43,43,43,0.75);
     visibility: hidden;
-    transform: translateY(-30%);
     cursor: pointer;
   }
 }
@@ -37,14 +35,13 @@
   #closebutton
   {
     z-index: 4;
-    height: 65px;
+    height: 3rem;
     width: 60px;
     position: absolute;
-    right: 0px;
+    right: 0;
     border: none;
     background-color: rgba(43,43,43,0.75);
     visibility: hidden;
-    transform: translateY(-30%);
     cursor: pointer;
   }
 }

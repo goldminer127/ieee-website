@@ -26,13 +26,16 @@ class Archive extends React.Component
             <div className = "section-body">
                 <h1 className = "section-name">{year}</h1>
                 <div className = "archive-semesters">
-                    {semesters.map(semester => <h3 className = "archive-semester" onClick = {() => this.changeDate(semester, year)}>{semester}</h3>)}
+                    {semesters.map(semester => <h3 className = "archive-semester" onClick = {() => this.changeDate(semester, year)}>{this.formatSemester(semester)}</h3>)}
                 </div>
             </div>
         );
     }
 
-    //{semester.charAt(0).toUpperCase() + semester.substring(1, semester.length)
+    formatSemester(semester)
+    {
+        return semester.charAt(0).toUpperCase() + semester.substring(1, semester.length);
+    }
 
     changeDate(semester, year)
     {

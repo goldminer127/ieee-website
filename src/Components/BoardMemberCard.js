@@ -7,23 +7,6 @@ import './BoardMemberCard.css'
 
 class BoardMemberCard extends React.Component
 {
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            id: undefined,
-            name: undefined,
-            position: undefined,
-            branch: undefined,
-            start: undefined,
-            image: undefined,
-            github: undefined,
-            linkedin: undefined,
-            size: undefined,
-            margin: undefined,
-        };
-    }
-
     static getDerivedStateFromProps(props,state)
     {
         return {
@@ -120,11 +103,6 @@ class BoardMemberCard extends React.Component
              *any focused cards are removed from the screen if resize is to occure.
              */
         }
-    }
-
-    resize()
-    {
-        
     }
 
     goToGithub()

@@ -1,94 +1,65 @@
-@media screen and (min-width: 901px)
+.workshop-archive-card
 {
-    .workshop-archive-card
-    {
-        width: 500px;
-        text-align: center;
-        border: 5px solid black;
-        background-color: wheat;
-        cursor: pointer;
-    }
+    position: absolute;
 }
 
-
-@media screen and (max-width: 900px) and (min-width: 601px)
+.workshop-archive-text
 {
-    .workshop-archive-card
-    {
-        width: 500px;
-        text-align: center;
-        border: 5px solid black;
-        background-color: wheat;
-        cursor: pointer;
-    }
+    color: white;
+    margin: 0;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 600px)
+.workshop-archive-text:hover
 {
-    .workshop-archive-card
-    {
-        width: 275px;
-        text-align: center;
-        border: 5px solid black;
-        background-color: wheat;
-        cursor: pointer;
-    }
+    color: orange;
 }
 
-/* Common */
-
-.archive-card-images
+.folder-top
 {
-    width: 256px;
-    height: 144px;
+    position: absolute;
+    top: -2.45vw;
+}
+
+.folder-top-img
+{
+    width: 20vw;
+}
+
+.folder-body
+{
+    position: relative;
+    background-color: blanchedalmond;
+    width: 50vw;
+    height: 25vw;
+}
+
+.workshop-archive-title
+{
+    padding-top: 2vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.workshop-archive-description
+{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    line-height: 2vw;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.workshop-archive-thumbnail
+{
     position: relative;
     transform: translateX(-50%);
     left: 50%;
-    cursor: pointer;
-    padding-bottom: 10px;
+    width: 20vw;
+    height: 10vw;
 }
 
-.archive-thumbnail
+.hidden
 {
-    width: 256px;
-    height: 144px;
-}
-
-.archive-play-button
-{
-    width: 60px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-}
-
-.card-show
-{
-    visibility: visible;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 1px;
-    animation: slide-down 2s;
-}
-
-.card-hide
-{
-    visibility: hidden;
-    overflow: hidden;
-    height: 0px;
-    padding-top: 1px;
-    animation: slide-up 0s;
-}
-
-@keyframes slide-down
-{
-    0% {height: auto; opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes slide-up
-{
-    0% {height: auto; visibility: visible;}
-    100% {height: 0px;}
+    display: none;
 }

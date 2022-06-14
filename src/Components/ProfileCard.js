@@ -7,20 +7,6 @@ import "./ProfileCard.css"
 
 class ProfileCard extends React.Component
 {
-    constructor(props)
-    {
-        super(props)
-        this.state = {
-            avatar: undefined,
-            name: undefined,
-            membership: undefined,
-            githubLink: undefined,
-            linkedinLink: undefined,
-            cardColor: undefined,
-            textColor: undefined,
-        }
-    }
-
     static getDerivedStateFromProps(props, state)
     {
         let avatar = props.avatar;

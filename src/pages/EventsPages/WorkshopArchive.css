@@ -14,5 +14,5 @@
     left: 50%;
     justify-content: space-evenly;
     padding-bottom: 100px;
-    background-image: linear-gradient(black,rgb(0, 31, 68),rgb(0, 53, 117),rgb(0, 31, 68),black)
+    background-color: black;
 }

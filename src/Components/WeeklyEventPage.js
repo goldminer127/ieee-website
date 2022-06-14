@@ -6,29 +6,6 @@ import "./WeeklyEventPage.css"
 
 class WeeklyEventPage extends React.Component
 {
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            banner: undefined,
-            reducedBanner: undefined,
-            type: undefined,
-            title: undefined,
-            subtitle: undefined,
-            description: undefined,
-            hostImage: undefined,
-            hostName: undefined,
-            hostMembership: undefined,
-            hostLinkedin: undefined,
-            cohostImage: undefined,
-            cohostName: undefined,
-            cohostMembership: undefined,
-            cohostLinkedin: undefined,
-            location: undefined,
-            link: undefined
-        }
-    }
-
     static getDerivedStateFromProps(props, state)
     {
         return {
