@@ -5,6 +5,7 @@ import LinkedinLogo from "./images/linkedin.png"
 import GithubLogo from "./images/github.png"
 import DiscordLogo from "./images/discord.png"
 import InstagramLogo from "./images/instagram.png"
+import TwitterLogo from "./images/twitter.png"
 import React from "react"
 import "./Footer.css"
 
@@ -49,6 +50,10 @@ class Footer extends React.Component
       window.open("https://www.instagram.com/ieee.ualbany/")
     }
 
+    const goToTwitter = () =>
+    {
+      window.open("https://mobile.twitter.com/ieeeualbany?lang=en")
+    }
 
     if(this.state.showImage)
     {
@@ -64,6 +69,7 @@ class Footer extends React.Component
                 <img src = {LinkedinLogo} id = "linkedinlink" className = "footerlinks" onClick = {goToLinkedIn} alt = "Linkedin link"/>
                 <img src = {GithubLogo} id = "githublink" className = "footerlinks" onClick = {goToGithub} alt = "Github link"/>
                 <img src = {InstagramLogo} id = "instagramlink" className = "footerlinks" onClick = {goToInstagram} alt = "Instagram link"/>
+                <img src = {TwitterLogo} id = "twitterlink" className = "footerlinks" onClick = {goToTwitter} alt = "Twitter link"/>
             </div>
             </div>
         </div>
@@ -82,6 +88,7 @@ class Footer extends React.Component
                 <img src = {LinkedinLogo} id = "linkedinlink" className = "footerlinks" onClick = {goToLinkedIn} alt = "Linkedin link"/>
                 <img src = {GithubLogo} id = "githublink" className = "footerlinks" onClick = {goToGithub} alt = "Github link"/>
                 <img src = {InstagramLogo} id = "instagramlink" className = "footerlinks" onClick = {goToInstagram} alt = "Instagram link"/>
+                <img src = {TwitterLogo} id = "twitterlink" className = "footerlinks" onClick = {goToTwitter} alt = "Twitter link"/>
             </div>
             </div>
         </div>

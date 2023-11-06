@@ -7,7 +7,7 @@
         background: no-repeat relative;
         background-position: 75%;
         background-size: 2262px 1424px;
-        background-image: url(../Components/images/WeeklyEventBackground.jpg) ;
+        background-image: url(../Components/images/WeeklyEventBackground.JPG) ;
     }
 
     #weekly-event-title
@@ -93,7 +93,7 @@
         background: no-repeat relative;
         background-position: 60%;
         background-size: 2262px 1424px;
-        background-image: url(../Components/images/WeeklyEventBackground.jpg) ;
+        background-image: url(../Components/images/WeeklyEventBackground.JPG) ;
     }
 
     #weekly-event-title
@@ -184,7 +184,7 @@
         background: no-repeat relative;
         background-position: 32% 0;
         background-size: auto 120%;
-        background-image: url(../Components/images/WeeklyEventBackground.jpg);
+        background-image: url(../Components/images/WeeklyEventBackground.JPG);
     }
 
     #weekly-event-title
