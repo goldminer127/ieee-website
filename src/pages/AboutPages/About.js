@@ -1,6 +1,6 @@
 import React from "react"
 import Logo from "../../Components/images/logo.png"
-import Img1 from "../assets/D75_1313.jpg"
+import Img1 from "../assets/D75_1313_new.jpg"
 import Img2 from "../assets/DSC_0521.JPG"
 import Img3 from "../assets/Img3.png"
 import Footer from "../../Components/Footer.js"
