@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 #about-body
 {
     background-color: white;
@@ -14,7 +17,7 @@
         background: no-repeat relative;
         background-position: 0%;
         background-size: auto 120%;
-        background-image: url(../assets/angled_dark_cropped.jpg);
+        background-image: url(../assets/angled_dark_cropped_new.jpg);
     }
 
     #about-logo
@@ -136,7 +139,7 @@
         background: no-repeat relative;
         background-position: 0%;
         background-size: auto 120%;
-        background-image: url(../assets/angled_dark_cropped.jpg);
+        background-image: url(../assets/angled_dark_cropped_new.jpg);
     }
 
     #about-logo
@@ -258,7 +261,7 @@
         background: no-repeat relative;
         background-position: 50%;
         background-size: auto 120%;
-        background-image: url(../assets/angled_dark_cropped.jpg);
+        background-image: url(../assets/angled_dark_cropped_new.jpg);
     }
 
     #about-logo
@@ -326,6 +329,8 @@
         overflow: hidden;
         animation: move-E3 6s;
     }
+
+    
 
     #about-ua-logo
     {
@@ -406,53 +411,67 @@
     background-color: black;
     width: 100%;
     height: auto;
-    padding-bottom: 5rem;
 }
 
 .about-section
 {
     overflow: auto;
-    padding-bottom: 5rem;
 }
 
 #about-img1
 {
     float: right;
-    width: 50%;
+    width: 45%;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
 }
 
 #about-text1
 {
+    font-size: 2vw;
     float: left;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
+
 }
 
 #about-img2
 {
     float: left;
-    width: 50%;
+    width: 44%;
+    margin-left: 1rem;
 }
 
 #about-text2
 {
+    font-size: 2vw;
     float: right;
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 #about-img3
 {
     float: right;
     width: 50%;
+    height: 60%;
     margin-top: 8vw;
+    
 }
 
 #about-text3
 {
+    font-size: 2vw;
     float: left;
+    margin-top: 4vw;
     margin-left: 1rem;
     margin-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
 }
 
 .about-text
