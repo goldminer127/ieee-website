@@ -10,33 +10,69 @@ function Schedule()
             <Header color = "rgb(41, 41, 41)"/>
             <div id = "schedule-container">
                 <h1 id = "schedule-title">
-                    Spring February 6th - 12th
+                    Fall November 16th - December 1st
                 </h1>
                 <div id = "card-container">
                     <div className = "event-card">
                         <WorkshopCard
-                            name = "General Interest Meeting for SWE and NSBE"
-                            description = "Introducing the Society of Women Engineers (SWE)! Their goal is to empower women to achieve their full potential in careers as engineers and leaders, expand the image of the engineering and technology professions as a positive force in improving the quality of life, and demonstrate the value of diversity and inclusion. Their main purpose is centered around a passion for their members’ success and continues to evolve with the challenges and opportunities reflected in today's exciting engineering and technology specialties."
-                            date = "February 10th"
-                            time = "8:00PM - 9:00PM EST"
-                            location = "Zoom"
+                            name = "Intro to Game Development with Unreal Engine"
+                            description = "Discover the power of Unreal Engine in our beginner-friendly workshop. Learn why it's the ideal platform for crafting captivating video games. Dive into visual scripting with Blueprints for efficient game development. Unleash your creativity with us and start your journey into the world of 3D game design."
+                            date = "November 16th"
+                            time = "7:30PM"
+                            location = "HU 113"
                             link = "https://discord.gg/PAqcKu6"
                         />
                     </div>
                     <div className = "event-card">
                         <WorkshopCard
-                            flyer = "/images/2021-2022/events/spring/spring-general-interest.jpg"
-                        />
-                    </div>
-                    <div className = "event-card">
-                        <WorkshopCard
-                            name = "Side Project Development Night"
-                            description = "Join us to show off what projects you're working on, get help on a current project, or find motivation to start a new project."
-                            date = "February 11th"
-                            time = "8:00PM EST"
-                            location = "UAlbany Campus"
+                            name = "VR Full Body Tracking Workshop"
+                            description = "Being able to interact with a virtual world is cool, but now imagine being able to move your feet and hips in the real world and have it translated to the VR game. In this workshop we will be building these trackers from off the shelf hardware and putting them all together."
+                            date = "November 17th"
+                            time = "6:00PM"
+                            location = "ETEC 190"
                             link = "https://discord.gg/PAqcKu6"
+
                         />
+                        </div>
+                        <div className = "event-card" >
+                            <WorkshopCard
+                            name = "Ava Cryptography Workshop"
+                            description = ""
+                            date = "November 20th"
+                            time = "7:30PM"
+                            location = "SS133"
+                            link = "https://discord.gg/PAqcKu6"
+                            />
+                        </div>
+                        <div className = "event-card" >
+                            <WorkshopCard
+                            name = "Blender Workshop"
+                            description = ""
+                            date = "November 29th"
+                            time = "7:30PM"
+                            location = "SS133"
+                            link = "https://discord.gg/PAqcKu6"
+                            />
+                            </div>
+                        <div className = "event-card" >
+                            <WorkshopCard
+                            name = "PDN Monzir, Vincent"
+                            description = ""
+                            date = "December 1st"
+                            time = "3:00PM"
+                            location = "SS133"
+                            link = "https://discord.gg/PAqcKu6"
+                            />
+                            </div>
+                        <div className = "event-card" >
+                            <WorkshopCard
+                            name = "Final General Meeting For the Semester"
+                            description = ""
+                            date = "December 1st"
+                            time = "5:00PM"
+                            location = "SS133"
+                            link = "https://discord.gg/PAqcKu6"
+                            />           
                     </div>
                 </div>
             </div>
