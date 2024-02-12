@@ -8,6 +8,8 @@
 # testing
 /coverage
 src/TestFolder/
+TestFolder/
+src/TestFolder
 
 # production
 /build
