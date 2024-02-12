@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-TestFolder/
+/TestFolder
 
 # production
 /build
