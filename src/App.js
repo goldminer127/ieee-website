@@ -8,7 +8,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='' element={<TestComponent/>}/>
+          <Route path='/ieeeualbany' element={<TestComponent/>}/>
         </Routes>
       </Router>
     </div>
