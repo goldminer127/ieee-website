@@ -5,7 +5,6 @@ const TestComponent = () =>
 {
     //Replace SampleComponent with your component to test inside the div
     //You can also change the style of this div if needed
-    // ansfuiasnciasnciasnc
     return(
         <Box component = 'div' sx={{width: '100vw', height: '100vh'}}>
             <SampleComponent text = "Let's get started"/>
