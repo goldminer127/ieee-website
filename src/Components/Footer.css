@@ -1,15 +1,15 @@
 #footer
 {
     position: relative;
-    height: 90px;
+    height: 100px;
     padding: 20px;
     background-color: #361253;
 }
 .footer-socialIcons
 {
     position: absolute;
-    bottom: 20px;
-    right : 20px;
+    bottom: 15px;
+    right : 40px;
 }
 
 .footer-socialIcon
@@ -23,25 +23,43 @@
 {
     height: 48px;
 }
+.logo-text
+{
+    position:absolute;
+    font-size: 21px;
+    bottom: 50px;
+    left: 70px;
+    color:#FFCD19;
+}
 @media(max-width: 768px){
-    #footer {
-        height: auto;
-        padding: 10px;
-        text-align: center;
+    #footer 
+    {
+        position: relative;
+        height: 150px;
+        padding: 20px;
+         
+       
     }
 
-    .footer-socialIcons {
-        position: static;
-        margin-top: 10px;
+    .footer-socialIcons 
+    {
+        position: absolute;
+        bottom: 15px;
+        right : 40px;
     }
 
-    .footer-socialIcon {
-        margin-left: 5px;
-        width: 25px;
-        height: 25px;
+    .footer-socialIcon
+    {
+        width: 48px;
+        height: 48px;
+        margin-left: 10px;
+    }
+    .logo-text
+    {
+        position:absolute;
+        font-size: 21px;
+        bottom: 100px;
+        left: 70px;
+        color:#FFCD19;
     }
 }
-
-
-
-
