@@ -34,7 +34,8 @@ function Home()
     document.getElementById("component1-ground1").className = "charged-ground"
     document.getElementById("cpu").className = "charged-cpu";
     await new Promise(r => setTimeout(r, 1000));
-    openPage(page, "http://localhost:3000/events/home");await new Promise(r => setTimeout(r, 500));
+    openPage(page, "/events/home");
+    await new Promise(r => setTimeout(r, 500));
     document.getElementById("pcb").style.visibility = "hidden";
   }
 
@@ -67,7 +68,7 @@ function Home()
     document.getElementById("about-ground1").className = "charged-ground";
     document.getElementById("cpu").className = "charged-cpu";
     await new Promise(r => setTimeout(r, 1500));
-    openPage(page, "http://localhost:3000/about");
+    openPage(page, "/about");
     await new Promise(r => setTimeout(r, 500));
     document.getElementById("pcb").style.visibility = "hidden";
   }
@@ -105,7 +106,7 @@ function Home()
     document.getElementById("component4-wire1").className = "board-charged-wire"
     document.getElementById("cpu").className = "charged-cpu";
     await new Promise(r => setTimeout(r, 1500));
-    openPage(page, "http://localhost:3000/members");
+    openPage(page, "/members");
     await new Promise(r => setTimeout(r, 500));
     document.getElementById("pcb").style.visibility = "hidden";
   }
@@ -131,10 +132,10 @@ function Home()
     openServerPage();
   }
 
-  const openPage = (page, link) =>
+  const openPage = (page, path) =>
   {
     document.getElementById(page).className = "openembed";
-    document.getElementById(page).src = link;
+    document.getElementById(page).src = process.env.PUBLIC_URL + path;
     document.getElementById(page).style.visibility = "visible";
     setTimeout(() =>
     {

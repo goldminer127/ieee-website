@@ -1,15 +1,15 @@
 import './App.css';
-import About from './Pages/AboutPages/About.js'
-import BoardMembers from './Pages/BoardMembers/Members.js'
-import Home from './Pages/Home.js'
-import EventsHome from './Pages/EventsPages/EventsHome.js'
-import Projects from './Pages/EventsPages/Projects.js'
-import Schedule from './Pages/EventsPages/Schedule.js'
-import CodingNight from './Pages/EventsPages/CodingNight.js'
-import WorkshopArchive from './Pages/EventsPages/WorkshopArchive.js';
+import About from './pages/AboutPages/About.js'
+import BoardMembers from './pages/BoardMembers/Members.js'
+import Home from './pages/Home.js'
+import EventsHome from './pages/EventsPages/EventsHome.js'
+import Projects from './pages/EventsPages/Projects.js'
+import Schedule from './pages/EventsPages/Schedule.js'
+import CodingNight from './pages/EventsPages/CodingNight.js'
+import WorkshopArchive from './pages/EventsPages/WorkshopArchive.js';
 //Must import any featured projects from members
-import TShell from './Pages/EventsPages/MemberProjects/TShell.js'
-import OfficeHours from './Pages/EventsPages/MemberProjects/OfficeHours.js'
+import TShell from './pages/EventsPages/MemberProjects/TShell.js'
+import OfficeHours from './pages/EventsPages/MemberProjects/OfficeHours.js'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
